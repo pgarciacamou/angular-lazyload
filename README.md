@@ -38,7 +38,7 @@ Access the service through the provider:
     	.when('/login', {
     		templateUrl: 'login/partials/login.html'
 
-We lazyload to the *mainApp* when angular resolves the route.
+Lazy load desired files to *mainApp* module when angular resolves the route.
 
     		,resolve: {
     			load: function (){
@@ -111,4 +111,4 @@ MIT
 [Sagar Ganatra]:https://github.com/sagar-ganatra
 [github]:https://github.com/sagar-ganatra/angular-require-resolve
 [blog]:http://www.sagarganatra.com/2014/08/lazy-loading-angularjs-components-using-providers.html
-[module]:https://github.com/pgarciacamou/angular-require-resolve
+[module/service]:https://github.com/pgarciacamou/angular-require-resolve
