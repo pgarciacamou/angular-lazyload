@@ -110,5 +110,5 @@ MIT
 [RequireJS]:http://requirejs.org/
 [Sagar Ganatra]:https://github.com/sagar-ganatra
 [github]:https://github.com/sagar-ganatra/angular-require-resolve
-[blog]:http://www.sagarganatra.com/2014/08/lazy-loading-angularjs-lazyLoad-using-providers.html
+[blog]:http://www.sagarganatra.com/2014/08/lazy-loading-angularjs-components-using-providers.html
 [module/service]:https://github.com/pgarciacamou/angular-require-resolve
