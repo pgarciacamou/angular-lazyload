@@ -66,7 +66,7 @@ A similar example:
     }]);
 
 This service will add an object called *lazyLoad* to the module specified.
-To be able to lazyLoad the services and controllers we need to use this new *lazyLoad* object.
+To be able to load the services and controllers we need to use this new *lazyLoad* object.
 
 To lazy load the *login/controllers/loginController* controller
 
