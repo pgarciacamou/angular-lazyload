@@ -4,7 +4,7 @@ Angular-lazyload
 Angular-lazyload is a lightweight AngularJS service that using RequireJS allows to dynamically load services and controllers when a route is resolved.
 
 Pros
-  - Weights ~1KB.
+  - Weights ~.5KB.
   - Allows to hide functionality from users that are not allowed to see.
   - Very big sites can dramatically increase initial load time.
   - There might be a common path for users in your site. It might help to lazy load scenarios where the user wouldn't visit regularly.
@@ -53,7 +53,7 @@ Lazy load desired files to *mainApp* module when angular resolves the route.
 A similar example:
 
     	.when('/register', {
-    		templateUrl: 'components/register/partials/register.html'
+    		templateUrl: 'register/partials/register.html'
     		,resolve: {
     			load: function (){
     				return $lazy('mainApp').load([
@@ -65,8 +65,8 @@ A similar example:
     	});
     }]);
 
-This service will add an object called *components* to the module specified.
-To be able to lazyLoad the services and controllers we need to use this new *components* object.
+This service will add an object called *lazyLoad* to the module specified.
+To be able to lazyLoad the services and controllers we need to use this new *lazyLoad* object.
 
 To lazy load the *login/controllers/loginController* controller
 
@@ -74,7 +74,7 @@ To lazy load the *login/controllers/loginController* controller
 
 This new object allows you to access the controller register service:
 
-    .components
+    .lazyLoad
     .controller('loginController', ['$scope', 'loginService', function ($scope, loginService) {
         ...
     }]);
@@ -82,7 +82,7 @@ This new object allows you to access the controller register service:
 To lazy load the *login/controllers/loginService* service is basically the same as the controller.
 
     angular.module('mainApp')
-    .components
+    .lazyLoad
     .service('loginService', function () {
     	...
     });
@@ -93,7 +93,7 @@ Tech
 
  Uses two of open source JS libraries/frameworks to work:
 
-* [AngularJS] - AngularJS lets you write client-side web applications as if you had a smarter browser. It lets you use good old HTML (or HAML, Jade and friends!) as your template language and lets you extend HTML’s syntax to express your application’s components clearly and succinctly
+* [AngularJS] - AngularJS lets you write client-side web applications as if you had a smarter browser. It lets you use good old HTML (or HAML, Jade and friends!) as your template language and lets you extend HTML’s syntax to express your application’s lazyLoad clearly and succinctly
 * [RequireJS] - RequireJS is a JavaScript file and module loader.
 
 Birth
@@ -110,5 +110,5 @@ MIT
 [RequireJS]:http://requirejs.org/
 [Sagar Ganatra]:https://github.com/sagar-ganatra
 [github]:https://github.com/sagar-ganatra/angular-require-resolve
-[blog]:http://www.sagarganatra.com/2014/08/lazy-loading-angularjs-components-using-providers.html
+[blog]:http://www.sagarganatra.com/2014/08/lazy-loading-angularjs-lazyLoad-using-providers.html
 [module/service]:https://github.com/pgarciacamou/angular-require-resolve
