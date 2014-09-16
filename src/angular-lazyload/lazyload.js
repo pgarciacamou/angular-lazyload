@@ -1,9 +1,9 @@
 (function(){
 	'use strict';
-	var components;
+	var lazyLoad;
 	angular.module('LazyLoad', [])
 	.config(['$controllerProvider', '$provide', function ($controllerProvider, $provide){
-		components = {
+		lazyLoad = {
 			controller: $controllerProvider.register
 			,service: $provide.service
 		};
@@ -15,7 +15,7 @@
 
 		return function(moduleName){
 			var mod = angular.module(moduleName);
-			mod.components = mod.components || components;
+			mod.lazyLoad = mod.lazyLoad || lazyLoad;
 			return {
 				load: function (arr){
 					arr = arr || [];
